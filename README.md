@@ -20,6 +20,11 @@ You will need to build this on a Kali machine
 	sudo docker run --rm -it --privileged -v /home/kali/images:/root/live-build-config/images kali-unattended-builder:1 ./build.sh --variant xfce --verbose
 ```
 
+## Running on a debian container - Kali host no longer needed
+```
+	docker build -t kali-debian-build --network=host -f debian-docker.dockerfile . 
+	sudo docker run --rm -it --privileged --network=host -v /home/codonnell/development/git/another_kali_repo/images:/root/live-build-config/images -v /proc:/proc kali-debian-build:latest ./build.sh --variant xfce --verbose
+```
 
 ## To Do
 
