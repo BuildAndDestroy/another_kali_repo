@@ -21,14 +21,7 @@ WORKDIR "/root/"
 RUN git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
 WORKDIR "/root/live-build-config/"
 RUN echo "# Additional Packages" >> kali-config/variant-default/package-lists/kali.list.chroot
-RUN echo "gobuster" >> kali-config/variant-default/package-lists/kali.list.chroot
-RUN echo "seclists" >> kali-config/variant-default/package-lists/kali.list.chroot
-RUN echo "powershell-empire" >> kali-config/variant-default/package-lists/kali.list.chroot
-RUN echo "starkiller" >> kali-config/variant-default/package-lists/kali.list.chroot
-RUN echo "openssh-server" >> kali-config/variant-default/package-lists/kali.list.chroot
-RUN echo "tor" >> kali-config/variant-default/package-lists/kali.list.chroot
-RUN echo "nyx" >> kali-config/variant-default/package-lists/kali.list.chroot
-RUN echo "torbrowser-launcher" >> kali-config/variant-default/package-lists/kali.list.chroot
+RUN echo 'gobuster\nseclists\nopenssh-server\npowershell-empire\nstarkiller\ntor\nnyx\nrealtek-rtl88xxau-dkms\ntorbrowser-launcher' >> kali-config/variant-default/package-lists/kali.list.chroot
 
 # Add an Automated Install in Grub
 RUN echo "label install" >> kali-config/common/includes.binary/isolinux/install.cfg
