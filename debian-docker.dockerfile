@@ -7,11 +7,11 @@ RUN apt install git live-build cdebootstrap debootstrap curl -y
 
 # Install required packages
 RUN wget http://http.kali.org/pool/main/k/kali-archive-keyring/kali-archive-keyring_2020.2_all.deb
-RUN wget https://archive.kali.org/kali/pool/main/l/live-build/live-build_20210216_all.deb
+RUN wget https://archive.kali.org/kali/pool/main/l/live-build/live-build_20210216kali1_all.deb
 
 # Prep for Kali packaging
 RUN dpkg -i kali-archive-keyring_2020.2_all.deb
-RUN dpkg -i live-build_20210216_all.deb
+RUN dpkg -i live-build_20210216kali1_all.deb
 WORKDIR "/usr/share/debootstrap/scripts/"
 RUN echo "default_mirror http://http.kali.org/kali"; sed -e "s/debian-archive-keyring.gpg/kali-archive-keyring.gpg/g" sid > /tmp/kali
 RUN mv /tmp/kali .
