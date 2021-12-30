@@ -10,8 +10,10 @@ RUN git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
 WORKDIR "/root/live-build-config/"
 COPY daily_use.txt ./
 RUN cat daily_use.txt >> kali-config/variant-default/package-lists/kali.list.chroot
-#RUN echo "# Additional Packages" >> kali-config/variant-default/package-lists/kali.list.chroot
-#RUN echo 'gobuster\nseclists\nopenssh-server\npowershell-empire\nstarkiller\ntor\nnyx\nrealtek-rtl88xxau-dkms\ntorbrowser-launcher' >> kali-config/variant-default/package-lists/kali.list.chroot
+RUN mkdir kali-config/variant-minimal/package-lists
+RUN touch kali-config/variant-minimal/package-lists/kali.list.chroot
+COPY minimal_use.txt ./
+RUN cat minimal_use.txt >> kali-config/variant-minimal/package-lists/kali.list.chroot
 
 # Add an Automated Install in Grub
 RUN echo "label install" >> kali-config/common/includes.binary/isolinux/install.cfg

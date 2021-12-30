@@ -1,11 +1,9 @@
 # Additional Packages
 docker.io
-sudo
 gobuster
 seclists
 openssh-server
 powershell-empire
-starkiller
 tor
 nyx
 python3-virtualenv
@@ -13,15 +11,12 @@ exif
 libimage-exiftool-perl
 sublist3r
 mangler
+tree
 transmission
-realtek-rtl88xxau-dkms
-torbrowser-launcher
-spice-vdagent
 lftp
-debconf-utils
 live-build
 cdebootstrap
 devscripts
 dconf-editor
+debconf-utils
 virtualenv
-tree
