@@ -3,7 +3,7 @@ RUN apt update -y
 RUN apt upgrade -y
 WORKDIR "/root/"
 RUN apt install wget git -y
-RUN apt install git live-build cdebootstrap debootstrap curl -y
+RUN apt install git live-build cdebootstrap debootstrap curl simple-cdd -y
 
 # Install required packages
 RUN wget http://http.kali.org/pool/main/k/kali-archive-keyring/kali-archive-keyring_2020.2_all.deb

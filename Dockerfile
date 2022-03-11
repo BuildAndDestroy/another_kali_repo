@@ -3,7 +3,7 @@ RUN apt update -y
 RUN apt upgrade -y
 WORKDIR "/root/"
 RUN apt install wget git -y
-RUN apt install git live-build cdebootstrap debootstrap curl -y
+RUN apt install git live-build cdebootstrap debootstrap curl simple-cdd -y
 
 # Clone Kali Live Build and configure
 RUN git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
