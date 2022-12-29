@@ -6,12 +6,12 @@ RUN apt install wget git -y
 RUN apt install git live-build cdebootstrap debootstrap curl simple-cdd -y
 
 # Install required packages
-RUN wget http://http.kali.org/pool/main/k/kali-archive-keyring/kali-archive-keyring_2020.2_all.deb
-RUN wget https://archive.kali.org/kali/pool/main/l/live-build/live-build_20210216kali1_all.deb
+RUN wget http://http.kali.org/pool/main/k/kali-archive-keyring/kali-archive-keyring_2022.1_all.deb
+RUN wget https://archive.kali.org/kali/pool/main/l/live-build/live-build_20220505kali3_all.deb
 
 # Prep for Kali packaging
-RUN dpkg -i kali-archive-keyring_2020.2_all.deb
-RUN dpkg -i live-build_20210216kali1_all.deb
+RUN dpkg -i kali-archive-keyring_2022.1_all.deb
+RUN dpkg -i live-build_20220505kali3_all.deb
 WORKDIR "/usr/share/debootstrap/scripts/"
 RUN echo "default_mirror http://http.kali.org/kali"; sed -e "s/debian-archive-keyring.gpg/kali-archive-keyring.gpg/g" sid > /tmp/kali
 RUN mv /tmp/kali .
@@ -20,8 +20,8 @@ WORKDIR "/root/"
 # Clone Kali Live Build and configure
 RUN git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
 WORKDIR "/root/live-build-config/"
-RUN echo "# Additional Packages" >> kali-config/variant-default/package-lists/kali.list.chroot
-RUN echo 'gobuster\nseclists\nopenssh-server\npowershell-empire\nstarkiller\ntor\nnyx\ntorbrowser-launcher\nrealtek-rtl88xxau-dkms\ntorbrowser-launcher' >> kali-config/variant-default/package-lists/kali.list.chroot
+COPY daily_use.txt ./
+RUN cat daily_use.txt >> kali-config/variant-default/package-lists/kali.list.chroot
 
 # Add an Automated Install in Grub
 RUN echo "label install" >> kali-config/common/includes.binary/isolinux/install.cfg

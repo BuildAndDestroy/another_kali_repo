@@ -25,3 +25,10 @@ devscripts
 dconf-editor
 virtualenv
 tree
+nishang
+trufflehog
+mingw-w64
+ascii
+rlwrap
+bloodhound
+shellter
