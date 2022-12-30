@@ -28,7 +28,7 @@ You will need to build this on a Kali machine
 
 ## To Do
 
-* Kali's live build is not injecting the preseed.cfg file into the finished iso, need to debug and get that working.
+* Investigate the security url, I believe we can remove this from the preseed file
 
 
 # Resources:
