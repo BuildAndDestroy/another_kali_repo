@@ -9,6 +9,7 @@ docker.io
 exif
 ghidra
 gobuster
+golang
 lftp
 libimage-exiftool-perl
 live-build
