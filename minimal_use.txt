@@ -12,7 +12,6 @@ libimage-exiftool-perl
 sublist3r
 mangler
 tree
-transmission
 lftp
 live-build
 cdebootstrap

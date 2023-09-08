@@ -31,7 +31,6 @@ sublist3r
 sudo
 tor
 torbrowser-launcher
-transmission
 tree
 trufflehog
 virtualenv
