@@ -34,3 +34,4 @@ torbrowser-launcher
 tree
 trufflehog
 virtualenv
+whatweb
