@@ -1,5 +1,7 @@
 # Additional Packages
 ascii
+awscli
+azure-cli
 bloodhound
 cdebootstrap
 dconf-editor
