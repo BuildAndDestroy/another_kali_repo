@@ -15,6 +15,7 @@ golang
 lftp
 libimage-exiftool-perl
 live-build
+ltrace
 mangler
 mingw-w64
 nishang
@@ -29,6 +30,7 @@ shellter
 spice-vdagent
 starkiller
 steghide
+strace
 sublist3r
 sudo
 tor
