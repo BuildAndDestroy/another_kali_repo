@@ -1,4 +1,4 @@
-FROM debian:bookworm-20240423-slim
+FROM debian:12.5-slim
 RUN apt update -y
 RUN apt upgrade -y
 WORKDIR "/opt/"
