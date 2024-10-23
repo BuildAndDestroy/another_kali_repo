@@ -13,22 +13,16 @@ mkpasswd -m sha-512
 
 ## Dockerfile
 
-You will need to build this on a Kali machine
+Now works on Kali and Ubuntu
 ```
-[*] On a Kali vm
-	docker build -t kali-unattended-builder:1 .
+	sudo docker build -t kali-unattended-builder:1 .
+
+	# For Linux/Ubuntu OS
+	sudo docker run --rm -it --privileged -v /home/ubuntu/git/another_kali_repo/images:/opt/live-build-config/images kali-unattended-builder:1 ./build.sh --variant xfce --verbose
+
+	# For Kali OS
 	sudo docker run --rm -it --privileged -v /home/kali/images:/opt/live-build-config/images kali-unattended-builder:1 ./build.sh --variant xfce --verbose
 ```
-
-## Running on a debian container - Kali host no longer needed
-```
-	docker build -t kali-debian-build --network=host -f debian-docker.dockerfile . 
-	sudo docker run --rm -it --privileged --network=host -v /home/codonnell/development/git/another_kali_repo/images:/opt/live-build-config/images -v /proc:/proc kali-debian-build:latest ./build.sh --variant xfce --verbose
-```
-
-## To Do
-
-* Investigate the security url, I believe we can remove this from the preseed file
 
 
 # Resources:
