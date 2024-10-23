@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build -t kali-debian-build:$(date +%s) --network=host -f debian-docker.dockerfile .
+      run: docker build -t kali-debian-build:$(date +%s) -f Dockerfile .
