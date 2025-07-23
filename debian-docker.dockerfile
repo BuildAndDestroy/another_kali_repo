@@ -1,5 +1,5 @@
 # DEPRECATED - Just run the dockerfile build as this works on Ubuntu now
-FROM debian:latest
+FROM debian:12.11
 RUN apt update -y
 RUN apt upgrade -y
 WORKDIR "/opt/"
