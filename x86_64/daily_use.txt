@@ -2,6 +2,7 @@
 ascii
 awscli
 azure-cli
+azurehound
 bloodhound
 cdebootstrap
 dconf-editor
@@ -16,7 +17,6 @@ lftp
 libimage-exiftool-perl
 live-build
 ltrace
-mangler
 mingw-w64
 nishang
 nyx
@@ -25,6 +25,7 @@ powershell-empire
 python3-virtualenv
 realtek-rtl88xxau-dkms
 rlwrap
+s3scanner
 seclists
 shellter
 spice-vdagent

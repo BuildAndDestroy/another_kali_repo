@@ -1,0 +1,75 @@
+tools:
+  - name: cloud_enum
+    type: git+python
+    repo: https://github.com/initstring/cloud_enum.git
+    bin: cloud_enum.py
+    venv: true
+
+  - name: pacu
+    #type: git+pipenv
+    type: git+python
+    repo: https://github.com/RhinoSecurityLabs/pacu.git
+    venv: true
+    pyversion: "3.11"
+
+  #- name: around
+  #  type: rust
+  #  cargo: around
+
+  - name: scout_suite
+    type: git+python
+    repo: https://github.com/nccgroup/ScoutSuite.git
+    bin: scout.py
+    venv: true
+
+  - name: enumerate-iam
+    type: git+python
+    repo: https://github.com/andresriancho/enumerate-iam.git
+    bin: enumerate-iam.py
+    venv: true
+
+  - name: fireprox
+    type: git+python
+    repo: https://github.com/ustayready/fireprox.git
+    bin: fire.py
+
+  - name: aws_bucket_dump
+    type: git+python
+    repo: https://github.com/jordanpotti/AWSBucketDump.git
+    bin: AWSBucketDump.py
+    venv: true
+    pyversion: "3.11"
+
+  - name: skyark
+    type: git
+    repo: https://github.com/cyberark/SkyArk.git
+
+  #- name: gcp_enum
+  #  type: git+python
+  #  repo: https://github.com/nccgroup/gcp_enum.git
+  #  bin: gcp_enum.py
+  #  venv: true
+
+  - name: jwt_tool
+    type: git+python
+    repo: https://github.com/ticarpi/jwt_tool.git
+    bin: jwt_tool.py
+    venv: true
+
+  - name: nshound
+    type: git+python
+    repo: https://github.com/wiz-sec-public/namespacehound.git
+    bin: nshound.py
+    venv: true
+    pyversion: "3.11"
+
+  - name: dalfox
+    type: go
+    go_path: github.com/hahwul/dalfox/v2
+
+  - name: kiterunner
+    type: make+go
+    repo: https://github.com/assetnote/kiterunner.git
+    bin: dist/kr
+    outname: kr
+    wordlist: true
