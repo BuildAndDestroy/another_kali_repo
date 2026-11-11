@@ -15,4 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build -t kali-debian-build:$(date +%s) -f Dockerfile .
+      # Throwaway hash for CI only (password "ci") - never ship this image
+      run: |
+        docker build -t kali-unattended-builder:$(date +%s) \
+          --build-arg USER_PASSWORD_HASH="$(openssl passwd -6 -salt ci ci)" \
+          -f x86_64/everything.dockerfile .

@@ -10,7 +10,6 @@ python3-virtualenv
 exif
 libimage-exiftool-perl
 sublist3r
-mangler
 tree
 lftp
 live-build
